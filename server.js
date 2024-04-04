@@ -7,6 +7,14 @@ const portfolioRoute = require("./routes/portfolioRoute");
 
 app.use(express.json());
 
+app.use(cors(
+  {
+    origin: ["https://https://alec-portfolio-two.vercel.app/"],
+    methods: ["POST", "GET"],
+    credentials: true
+  }
+))
+
 app.use("/api/portfolio", portfolioRoute);
 
 const port = process.env.PORT || 5000;
