@@ -15,6 +15,10 @@ app.use(cors(
   }
 ))
 
+app.get("/", (req, res) => {
+  res.json("Welcome to Alec's Portfolio");
+});
+
 app.use("/api/portfolio", portfolioRoute);
 
 const port = process.env.PORT || 5000;
