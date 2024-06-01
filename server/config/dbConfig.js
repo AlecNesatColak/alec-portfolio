@@ -1,6 +1,8 @@
 const mongoose = require("mongoose");
 
-const connect = mongoose.connect('mongodb+srv://acolak9:TikiTaka10@cluster0.7vqlyes.mongodb.net/myPortfolio');
+const connect = mongoose.connect(
+  "mongodb+srv://acolak9:TikiTaka10@cluster0.7vqlyes.mongodb.net/myPortfolio"
+);
 
 const connection = mongoose.connection;
 

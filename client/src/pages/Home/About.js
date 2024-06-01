@@ -11,7 +11,6 @@ function About() {
   const backendSkills = skills[0]?.backend || [];
   const othersSkills = skills[0]?.others || [];
 
-  console.log(about);
 
   return (
     <div>

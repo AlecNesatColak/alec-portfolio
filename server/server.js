@@ -1,5 +1,6 @@
 const express = require("express");
 const app = express();
+const cors = require("cors");
 require("dotenv").config();
 const dbConfig = require("./config/dbConfig");
 
@@ -7,13 +8,11 @@ const portfolioRoute = require("./routes/portfolioRoute");
 
 app.use(express.json());
 
-app.use(cors(
-  {
-    origin: ["https://https://alec-portfolio-two.vercel.app/"],
-    methods: ["POST", "GET"],
-    credentials: true
-  }
-))
+app.use(cors({
+  origin: ["https://alec-portfolio-two.vercel.app/"],
+  methods: ["POST", "GET"],
+  credentials: true
+}));
 
 app.get("/", (req, res) => {
   res.json("Welcome to Alec's Portfolio");
@@ -32,4 +31,3 @@ if (process.env.NODE_ENV === "production") {
 }
 
 app.listen(port, () => console.log(`Server running on port ${port}`));
-
