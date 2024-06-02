@@ -10,7 +10,7 @@ app.use(express.json());
 
 app.use(
   cors({
-    origin: ["https://alec-portfolio-two.vercel.app/"],
+    origin: ["https://alec-portfolio-front-end.onrender.com/"],
     methods: ["POST", "GET"],
     credentials: true,
   })
