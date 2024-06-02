@@ -14,7 +14,7 @@ function AdminContact() {
     console.log(values);
     try {
       dispatch(ShowLoading());
-      const response = await axios.post("https://alec-portfolio-9j5d.onrender.com/api/portfolio/update-contact", {
+      const response = await axios.post("/api/portfolio/update-contact", {
         ...values,
         _id: portfolioData.contacts._id,
       });

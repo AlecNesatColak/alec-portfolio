@@ -19,12 +19,12 @@ function Experiences() {
       dispatch(ShowLoading());
       let response;
       if (selectedItemForEdit) {
-        response = await axios.post("https://alec-portfolio-9j5d.onrender.com/api/portfolio/update-experience", {
+        response = await axios.post("/api/portfolio/update-experience", {
           ...values,
           _id: selectedItemForEdit._id,
         });
       } else {
-        response = await axios.post("https://alec-portfolio-9j5d.onrender.com/api/portfolio/add-experience", values);
+        response = await axios.post("/api/portfolio/add-experience", values);
       }
       dispatch(HideLoading());
       if (response.data.success) {
@@ -46,7 +46,7 @@ function Experiences() {
   const onDelete = async (item) => {
     try {
       dispatch(ShowLoading());
-      const response = await axios.post("https://alec-portfolio-9j5d.onrender.com/api/portfolio/delete-experience", {
+      const response = await axios.post("/api/portfolio/delete-experience", {
         _id: item._id,
       });
       dispatch(HideLoading());

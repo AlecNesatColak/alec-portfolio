@@ -23,7 +23,7 @@ function App() {
   const getPortfolioData = async () => {
     try {
       dispatch(ShowLoading());
-      const response = await axios.get("https://alec-portfolio-9j5d.onrender.com/api/portfolio/get-portfolio-data");
+      const response = await axios.get("/api/portfolio/get-portfolio-data");
       dispatch(setPortfolioData(response.data));
       dispatch(ReloadData(false));
       dispatch(HideLoading());
