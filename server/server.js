@@ -10,7 +10,7 @@ app.use(express.json());
 
 app.use(
   cors({
-    origin: ["https://https://alec-portfolio-phi.vercel.app"],
+    origin: true,
     methods: ["POST", "GET"],
     credentials: true,
   })
