@@ -19,12 +19,12 @@ function Courses() {
       dispatch(ShowLoading());
       let response;
       if (selectedItemForEdit) {
-        response = await axios.post("/api/portfolio/update-course", {
+        response = await axios.post("https://alec-portfolio-9j5d.onrender.com/api/portfolio/update-course", {
           ...values,
           _id: selectedItemForEdit._id,
         });
       } else {
-        response = await axios.post("/api/portfolio/add-course", values);
+        response = await axios.post("https://alec-portfolio-9j5d.onrender.com/api/portfolio/add-course", values);
       }
       dispatch(HideLoading());
       if (response.data.success) {
@@ -46,7 +46,7 @@ function Courses() {
   const onDelete = async (item) => {
     try {
       dispatch(ShowLoading());
-      const response = await axios.post("/api/portfolio/delete-course", {
+      const response = await axios.post("https://alec-portfolio-9j5d.onrender.com/api/portfolio/delete-course", {
         _id: item._id,
       });
       dispatch(HideLoading());

@@ -25,7 +25,7 @@ function AdminAbout() {
       ];
 
       dispatch(ShowLoading());
-      const response = await axios.post("/api/portfolio/update-about", {
+      const response = await axios.post("https://alec-portfolio-9j5d.onrender.com/api/portfolio/update-about", {
         ...values,
         _id: portfolioData.about._id,
       });
