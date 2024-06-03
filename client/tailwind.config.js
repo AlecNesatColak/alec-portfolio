@@ -6,6 +6,7 @@ module.exports = {
         primary: "#0021A5",
         secondary: "#FA4616",
         tertiary: "#0A192F",
+        darkblue: "#333333"
       },
     },
     screens: {

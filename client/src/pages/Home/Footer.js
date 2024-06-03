@@ -1,17 +1,118 @@
+import { Link } from "react-scroll";
 import React from "react";
 
 function Footer() {
   return (
-    <div className="py-10">
-      <div className="h-[1px] w-full bg-gray-700"></div>
-
-      <div className="flex items-center justify-center flex-col mt-10 opacity-70">
-        <h1 className="text-white"> Designed and Developed by</h1>
-        <h1 className="text-white">
-          <span className="text-secondary">Alec-Nesat Colak</span>
-        </h1>
+    <footer className="footer--container">
+      <div className="footer--link--container">
+        <div className="hero--section--img">
+          <img src="./img/hero_img2.png" alt="Logo" />
+        </div>
+        <div className="footer--items">
+          <ul>
+            <li>
+              <Link
+                activeClass="navbar--active-content"
+                spy={true}
+                smooth={true}
+                offset={-70}
+                duration={500}
+                to="heroSection"
+                className="text-md"
+              >
+                Home
+              </Link>
+            </li>
+            <li>
+              <Link
+                activeClass="navbar--active-content"
+                spy={true}
+                smooth={true}
+                offset={-70}
+                duration={500}
+                to="MyPortfolio"
+                className="text-md"
+              >
+                Portfolio
+              </Link>
+            </li>
+            <li>
+              <Link
+                activeClass="navbar--active-content"
+                spy={true}
+                smooth={true}
+                offset={-70}
+                duration={500}
+                to="AboutMe"
+                className="text-md"
+              >
+                About Me
+              </Link>
+            </li>
+            <li>
+              <Link
+                activeClass="navbar--active-content"
+                spy={true}
+                smooth={true}
+                offset={-70}
+                duration={500}
+                to="Contact"
+                className="text-md"
+              >
+                Contact
+              </Link>
+            </li>
+          </ul>
+        </div>
       </div>
-    </div>
+      <hr className="divider" />
+      <div className="footer--content--container">
+        <p className="footer--content">Created by Alec-Nesat Colak</p>
+        <div className="footer--social--icon">
+          <ul>
+            <li>
+              <Link
+                activeClass="navbar--active-content"
+                spy={true}
+                smooth={true}
+                offset={-70}
+                duration={500}
+                to="Privacy_Policy"
+                className="text-sm"
+              >
+                Privacy Policy
+              </Link>
+            </li>
+            <li>
+              <Link
+                activeClass="navbar--active-content"
+                spy={true}
+                smooth={true}
+                offset={-70}
+                duration={500}
+                to="Terms_of_Service"
+                className="text-sm"
+              >
+                Terms of Service
+              </Link>
+            </li>
+            <li>
+              <Link
+                activeClass="navbar--active-content"
+                spy={true}
+                smooth={true}
+                offset={-70}
+                duration={500}
+                to="Cookies_Settings"
+                className="text-sm"
+              >
+                Cookies Settings
+              </Link>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </footer>
   );
 }
 

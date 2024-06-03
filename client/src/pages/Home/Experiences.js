@@ -20,7 +20,7 @@ function Experiences() {
                 className={`text-xl px-5 ${
                   selectedPeriod === index
                     ? "text-secondary border-secondary border-l-4 -ml-[3px] py-3 bg-primary text-semibold"
-                    : "text-white"
+                    : "text-darkblue"
                 }`}
               >
                 {experience.period}
@@ -30,13 +30,13 @@ function Experiences() {
         </div>
 
         <div className="flex flex-col gap-5">
-          <h1 className="text-white text-2xl font-semibold">
+          <h1 className="text-darkblue text-2xl font-semibold">
             {experiences[selectedPeriod]?.title}
           </h1>
-          <p className="text-white text-l font-semibold">
+          <p className="text-darkblue text-l font-semibold">
             {experiences[selectedPeriod]?.company}
           </p>
-          <p className="text-white text-l font-semibold">
+          <p className="text-darkblue text-l font-semibold">
             {experiences[selectedPeriod]?.description}
           </p>
         </div>

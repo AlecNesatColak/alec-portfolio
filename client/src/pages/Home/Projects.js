@@ -21,7 +21,7 @@ function Projects() {
                 className={`text-xl px-5 ${
                   selectedPeriod === index
                     ? "text-secondary border-secondary border-l-4 -ml-[3px] py-3 bg-primary text-semibold"
-                    : "text-white"
+                    : "text-darkblue"
                 }`}
               >
                 {projects.title}
@@ -31,12 +31,13 @@ function Projects() {
         </div>
 
         <div className="flex flex-col gap-5">
-          <p className="text-white text-l font-semibold">
+          <p className="text-darkblue text-l font-semibold">
             {projects[selectedPeriod]?.Technologies}
           </p>
-          <p className="text-white text-l font-semibold">
+          <p className="text-darkblue text-l font-semibold">
             {projects[selectedPeriod]?.description}
           </p>
+          <div>Project Image</div>
         </div>
       </div>
     </div>
